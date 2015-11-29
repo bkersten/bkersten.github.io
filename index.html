@@ -106,9 +106,31 @@ font-style: italic;
 text-align: left;
 margin: 0;
 }
+h4 a {
+color: inherit;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+ul.skills {
+padding: 0;
+list-style: none;
+}
+ul.skills li {
+display: inline-block;
+border-radius: 3px;
+background-color: #eee;
+padding: 2px 3px;
+}
+ul.skills li:hover {
+background-color: #aaf;
+transition: 300ms;
+}
 </style>
 </head>
 <body>
+<section>
 <h1 class="title">Ben Kersten</h1>
 <h2><a name="contact"></a>Contact</h2>
 <p>Twitter: <a href="http://twitter.com/ben_kersten">@ben_kersten</a></p>
@@ -117,34 +139,63 @@ margin: 0;
 <p>I love solving problems with software and learning new technologies. I believe in choosing the right tools for the job in order to deliver a lasting solution within a targeted time-frame. I look forward to working with small teams of skilled developers.</p>
 <h2>Specialties</h2>
 <p>Python, C/C++, Debugging, Network Programming, Databases, Game Development, Web Development.</p>
+</section>
+<section>
 <h2><a name="employment"></a>Employment Experience</h2>
+<section>
 <h3><a name="twobulls"></a>Senior Software Developer</h3>
-<h3>Two-Bulls (<a href="http://twobulls.com/">twobulls.com</a>)</h3><p class="term">August 2013 &ndash; Present | Melbourne</p>
+<h4><a href="http://twobulls.com/">Two Bulls</a></h4>
+<p class="term">August 2013 &ndash; Present | Melbourne</p>
 <ul>
 <li>Lead network developer on multiple iOS projects, including the <a href="http://cubify.com/store/blokify">Blokify</a> 3D printing app.</li>
 <li>Was part of the team that delivered <a href="https://www.youtube.com/watch?v%3DuKX-ksByiq0">Grovers Block Party</a>, an AR educational play experience built for Sesame Workshop and Qualcomm, and developed using Unity.</li>
 <li>Lead proponent in the automation of testing and deployment pipelines, and unification of development and production environments in order to achieve correct, repeatable product launches and updates.</li>
 </ul>
-<p>Primary languages include Python, C# and Objective-C.</p>
+<ul class="skills">
+<li>Python</li>
+<li>Django</li>
+<li>AWS</li>
+<li>C</li>
+<li>C++</li>
+<li>iOS</li>
+<li>OS X</li>
+<li>Objective-C</li>
+<li>C#</li>
+</ul>
+</section>
+<section>
 <h3><a name="dius"></a>Software Developer</h3>
-<h4>DiUS Computing (<a href="http://dius.com.au/">dius.com.au</a>)</h4>
+<h4><a href="http://dius.com.au/">DiUS Computing</a></h4>
 <p class="term">August 2012 &ndash; August 2013 | Melbourne</p>
 <ul>
 <li>Designed and developed a service that acts as a facade to a third party proprietary platform, in order to enhance and extend its capabilities.</li>
 <li>Was part of the development team producing an iOS app for one of Australia's most recognised brands. Focused heavily on development of security features.</li>
-<li>Developed an interactive web application for an embedded device with storage constraints of &lt;200KB.</li>
+<li>Developed an interactive web application for the <a href="http://dius.com.au/our-products/">PowerVu</a> embedded device, with limited storage constraints of &lt;200KB.</li>
 </ul>
-<p>Primary languages include Groovy, JavaScript, and Objective-C.</p>
+<ul class="skills">
+<li>Groovy</li>
+<li>Grails</li>
+<li>JavaScript</li>
+<li>iOS</li>
+<li>Objective-C</li>
+</ul>
+</section>
+<section>
 <h3><a name="amazon"></a>Software Development Engineer II</h3>
-<h4>Amazon.com</h4>
+<h4><a href="http://amazon.com">Amazon</a></h4>
 <p class="term">February 2012 &ndash; July 2012 | Seattle</p>
 <ul>
 <li>Prototyped developer tools to measure the performance impact of changes to the retail site.</li>
 <li>Backported WebKit's implementation of the Navigation Timing API for use in QtWebKit/PhantomJS.</li>
 </ul>
-<p>Primary languages include C++ and JavaScript.</p>
+<ul class="skills">
+<li>C++</li>
+<li>JavaScript</li>
+</ul>
+</section>
+<section>
 <h3><a name="quest"></a>Software Developer</h3>
-<h4>Quest Software (<a href="http://www.quest.com">www.quest.com</a>)</h4>
+<h4><a href="http://www.quest.com">Quest Software</a></h4>
 <p>August 2010 &ndash; February 2012 | Melbourne</p>
 <p>Was part of the Toad for Cloud Databases team, providing a data hub solution to allow people with SQL knowledge to query NoSQL databases in an easy and familiar way.</p>
 <ul>
@@ -153,9 +204,20 @@ margin: 0;
 <li>Developed a RESTful interface to Oracle's NoSQL Database using Clojure.</li>
 <li>Contributed bug fixes to the MySQL and Drizzle projects.</li>
 </ul>
-<p>Primary languages include C/C++, Lua, Python, and SQL.</p>
+<ul class="skills">
+<li>C</li>
+<li>C++</li>
+<li>Lua</li>
+<li>Python</li>
+<li>SQL<li>
+<li>HiveQL</li>
+<li>Linux</li>
+<li>Windows</li>
+</ul>
+</section>
+<section>
 <h3><a name="infinite"></a>Senior Software Engineer</h3>
-<h4>Infinite Interactive (<a href="http://www.infinite-interactive.com">www.infinite-interactive.com</a>)</h4>
+<h4><a href="http://www.infinite-interactive.com">Infinite Interactive</a></h4>
 <p class="term">October 2007 &ndash; August 2010 | Melbourne</p>
 <p>As a member of the Game Engine team, my role included adding new features to the engine and exposing them to Lua for the game play scripters, as well as maintenance and performance improvements.</p>
 <ul>
@@ -177,27 +239,71 @@ margin: 0;
 <li>Unrealized Project (Xbox 360/PC)</li>
 <li>Dragon Rush (Facebook/web browser plugin)</li>
 </ul>
-<p>Primary development languages include C/C++, Lua and Python.</p>
+<ul class="skills">
+<li>C</li>
+<li>C++</li>
+<li>Lua</li>
+<li>Python</li>
+<li>Xbox 360</li>
+<li>Nintento DS</li>
+<li>Nintendo Wii</li>
+<li>Sony PSP</li>
+<li>Steam</li>
+<li>Windows</li>
+</ul>
+</section>
+<section>
 <h3><a name="august"></a>Web Developer</h3>
-<h4>August (<a href="https://www.august.com.au">www.august.com.au</a>)</h4>
+<h4><a href="https://www.august.com.au">August</a></h4>
 <p class="term">August 2006 &ndash; October 2007 | Melbourne</p>
 <p>I was asked to join August as a contractor when they were still only the original three founders, and became a full time member after completing my degree at RMIT University.</p>
-<p>Primary languages include PHP, SQL, JavaScript and ActionScript.</p>
+<ul class="skills">
+<li>PHP</li>
+<li>SQL</li>
+<li>JavaScript</li>
+<li>ActionScript 3</li>
+<li>CSS</li>
+</ul>
+</section>
+<section>
 <h3><a name="alkemi"></a>Web Developer</h3>
-<h4>Alkemi International (<a href="http://www.alkemi.com.au">www.alkemi.com.au</a>)</h4>
+<h4><a href="http://www.alkemi.com.au">Alkemi International</a></h4>
 <p class="term">June 2003 &ndash; August 2005 | Melbourne</p>
 <p>I began working at Alkemi International after being recommended by my lecturer at Monash University. I ended up having a relationship with the company for many years and over the time filled positions from junior developer to lead developer.</p>
-<p>Primary languages include PHP, ASP/VBScript, ColdFusion, SQL and JavaScript.</p>
-<hr style="page-break-before:always;display:none;">
+<ul class="skills">
+<li>PHP</li>
+<li>ASP/VBScript</li>
+<li>ColdFusion</li>
+<li>SQL</li>
+<li>JavaScript</li>
+</ul>
+</section>
+</section>
+<section>
 <h2><a name="education"></a>Education</h2>
+<section>
 <h3><a name="rmit"></a>RMIT University</h3>
 <h4>Bachelor of Applied Science, Computer Science</h4>
 <p class="term">2004 &ndash; 2006 | Melbourne</p>
-<p>The majority of software development subjects at RMIT were completed using C and Java and were targeted at the Solaris operating system. I focused my studies on game development, databases, software development practices and methodologies, and programming languages. Languages used include Java, C, C++, Python, Perl, VB.NET, Transact-SQL, and M68K assembly.</p>
+<p>The majority of software development subjects at RMIT were completed using C and Java and were targeted at the Solaris operating system. I focused my studies on game development, databases, software development practices and methodologies, and programming languages.</p>
+<ul class="skills">
+<li>Java</li>
+<li>C</li>
+<li>C++</li>
+<li>Python</li>
+<li>Perl</li>
+<li>VB.NET</li>
+<li>Transact-SQL</li>
+<li>M68K assembly</li>
+<li>Solaris</li>
+</ul>
+</section>
+<section>
 <h3><a name="monash"></a>Monash University</h3>
 <h4>Multimedia Computing</h4>
 <p class="term">2002 &ndash; 2003 | Berwick</p>
 <p>I spent two years studying Multimedia Computing at Monash University before deciding to instead study Computer Science at RMIT University.</p>
+</section>
+</section>
 </body>
-
 </html>
