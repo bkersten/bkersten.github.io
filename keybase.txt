@@ -1,0 +1,55 @@
+
+==================================================================
+https://keybase.io/bkersten
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.ben-kersten.com
+  * I am bkersten (https://keybase.io/bkersten) on keybase.
+  * I have a public key ASBV0Zi9nEUuScuXVw6D1ltCEpPY7KrqXJFk_YYxmnMK2Ao
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012055d198bd9c452e49cb97570e83d65b421293d8ecaaea5c9164fd86319a730ad80a",
+            "host": "keybase.io",
+            "kid": "012055d198bd9c452e49cb97570e83d65b421293d8ecaaea5c9164fd86319a730ad80a",
+            "uid": "aa912eeb96a2497aa40a6b8a420df719",
+            "username": "bkersten"
+        },
+        "service": {
+            "hostname": "www.ben-kersten.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.17"
+    },
+    "ctime": 1475235036,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1475234738,
+        "hash": "5af3c33b2f107b10c54892bec8c0c75f32a7862f93426f26de02d303bb49955aea986e66952e7e5bc98646285533db3ff549eff32c9cb26fcb014f6c5938e19e",
+        "seqno": 658950
+    },
+    "prev": "6f8958ebd8eaeec0a14ab89d75f968293569ce24e518f272c2bad1ce5826ca00",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgVdGYvZxFLknLl1cOg9ZbQhKT2Oyq6lyRZP2GMZpzCtgKp3BheWxvYWTFAvt7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNTVkMTk4YmQ5YzQ1MmU0OWNiOTc1NzBlODNkNjViNDIxMjkzZDhlY2FhZWE1YzkxNjRmZDg2MzE5YTczMGFkODBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNTVkMTk4YmQ5YzQ1MmU0OWNiOTc1NzBlODNkNjViNDIxMjkzZDhlY2FhZWE1YzkxNjRmZDg2MzE5YTczMGFkODBhIiwidWlkIjoiYWE5MTJlZWI5NmEyNDk3YWE0MGE2YjhhNDIwZGY3MTkiLCJ1c2VybmFtZSI6ImJrZXJzdGVuIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJ3d3cuYmVuLWtlcnN0ZW4uY29tIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMTcifSwiY3RpbWUiOjE0NzUyMzUwMzYsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ3NTIzNDczOCwiaGFzaCI6IjVhZjNjMzNiMmYxMDdiMTBjNTQ4OTJiZWM4YzBjNzVmMzJhNzg2MmY5MzQyNmYyNmRlMDJkMzAzYmI0OTk1NWFlYTk4NmU2Njk1MmU3ZTViYzk4NjQ2Mjg1NTMzZGIzZmY1NDllZmYzMmM5Y2IyNmZjYjAxNGY2YzU5MzhlMTllIiwic2Vxbm8iOjY1ODk1MH0sInByZXYiOiI2Zjg5NThlYmQ4ZWFlZWMwYTE0YWI4OWQ3NWY5NjgyOTM1NjljZTI0ZTUxOGYyNzJjMmJhZDFjZTU4MjZjYTAwIiwic2Vxbm8iOjcsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RA14ouROlPsnbZnegAjD8Yzqe79JoQ93wfIxiXHn9angATkConUI7J6WEROMhptyb5Ro35e4hcI2C0ljxUwqEMC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBC10obgjWoE5HxqFVMRFtPEdNbx96xRibdx+t90qQpZo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bkersten
+
+==================================================================
