@@ -6,138 +6,299 @@
   <title>Ben Kersten</title>
   <meta name="description" content="Lead Software Developer of backend services at Two Bulls in Melbourne">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
-    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
   <style type="text/css">
     body {
       max-width: 940px;
       margin: 20px auto !important;
+      padding: 10px 10px;
       float: none !important;
+      font-family: 'Fira Sans', sans-serif;
+      font-display: fallback;
+      color: #000;
     }
 
     .title {
       padding-top: 24pt;
-      color: #000000;
       font-weight: bold;
       font-size: 36pt;
       padding-bottom: 6pt;
-      font-family: "Arial";
-      line-height: 1.15;
+      font-family: 'Fira Sans', sans-serif;
       text-align: left;
     }
 
     li {
-      color: #000000;
       font-size: medium;
-      font-family: "Arial"
     }
 
     p {
-      margin: 0;
-      color: #000000;
+      margin: 0 0 0.5em 0;
       font-size: medium;
-      font-family: "Arial"
+      line-height: 1.35em;
     }
 
     h1 {
       padding-top: 24pt;
-      color: #000000;
       font-weight: bold;
       font-size: xx-large;
       padding-bottom: 6pt;
-      font-family: "Arial";
-      line-height: 1.15;
       text-align: left;
       margin-bottom: 0;
     }
 
     h2 {
       padding-top: 18pt;
-      color: #000000;
       font-weight: bold;
       font-size: x-large;
-      padding-bottom: 4pt;
-      font-family: "Arial";
-      line-height: 1.15;
+      padding-bottom: 6pt;
       text-align: left;
       margin-bottom: 0;
     }
 
-    h3 {
+    article h1 {
       padding-top: 14pt;
-      color: #444444;
+      color: #333;
       font-weight: bold;
+      font-size: x-large;
+      padding-bottom: 6pt;
+      text-align: left;
+      margin: 0;
+    }
+
+    article h2 {
+      padding-top: 8pt;
+      color: #333;
       font-size: large;
-      padding-bottom: 4pt;
-      font-family: "Arial";
-      line-height: 1.15;
+      padding-bottom: 6pt;
       text-align: left;
       margin: 0;
+      text-transform: uppercase;
     }
 
-    h4 {
-      padding-top: 12pt;
-      color: #444444;
-      font-size: medium;
-      padding-bottom: 2pt;
-      font-family: "Arial";
-      line-height: 1.15;
-      font-style: italic;
-      text-align: left;
-      margin: 0;
-    }
-
-    h4 a {
+    h1 > a,
+    h2 > a,
+    h3 > a,
+    h4 > a {
       color: inherit;
       text-decoration: none;
+      display: block;
+      height: 100%;
+      width: 100%;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    ul.skills {
-      padding: 2px 0;
-      list-style: none;
+    li {
+      margin: 0.5em auto;
     }
 
-    ul.skills li {
-      display: inline-block;
-      border-radius: 3px;
-      background-color: #eee;
-      padding: 2px 3px;
+    @media print {
+
+      @page {
+        margin: 1.5cm;
+      }
+
+      * {
+        color: #000;
+        background-color: #fff;
+        @include box-shadow(none);
+        @include text-shadow(none);
+      }
+
+      body {
+        width: 90%;
+      }
+
+      .title {
+        padding-top: 12pt;
+      }
+
+      .skills ul {
+        columns: 3;
+      }
+
+      nav {
+        visibility: hidden;
+        display: none;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      li a[href*='//']:after,
+      p a[href*='//']:after {
+        content: " (" attr(href) ")";
+      }
+
+      li,
+      section,
+      p {
+        page-break-inside: avoid;
+      }
     }
 
-    ul.skills li:hover {
-      background-color: #aaf;
-      transition: 300ms;
+    @media only screen {
+
+      .skills ul {
+        padding: 2px 0;
+        list-style: none;
+      }
+
+      .skills li {
+        display: inline-block;
+        border-radius: 3px;
+        background-color: #eee;
+        padding: 2px 3px;
+        margin: 3px auto;
+      }
+
+      .skills li:hover {
+        background-color: #aaf;
+        transition: 300ms;
+      }
+
+      .skills h3 {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 1px;
+      }
+
+      nav ul {
+        padding: 2px 0;
+        list-style: none;
+      }
+
+      nav li {
+        display: inline-block;
+      }
+
+      nav li + li:before {
+        content: " / ";
+      }
+
+      #top-link {
+        position: fixed;
+        bottom: 10px;
+        float: right;
+        right: 10%;
+        border-radius: 3px;
+        background-color: #eeeeeeee;
+        padding: 2px 3px;
+        margin: 3px auto;
+      }
+
+      #top-link a {
+        text-decoration: none;
+      }
+
+      #top-link a:hover {
+        text-decoration: underline;
+      }
+
     }
+
+    time {
+      font-weight: bold;
+    }
+
+    @media only screen and (min-width: 375px) {
+
+      #two-bulls {
+        background: center / contain no-repeat url('assets/twobulls_logo-type.png');
+        height: 26px;
+        width: 129px;
+      }
+
+      #dius {
+        background: center / contain no-repeat url('assets/DIUS_lightbg_@2x.png');
+        height: 52px;
+        width: 197px;
+      }
+
+      #amazon {
+        background: center / contain no-repeat url('assets/amazon-logo-orgsmile.svg');
+        height: 49px;
+        width: 136px;
+      }
+
+      #quest {
+        background: center / contain no-repeat url('assets/quest-logo.png');
+        height: 42px;
+        width: 156px;
+      }
+
+      #august {
+        background: center / contain no-repeat url('assets/august-logo.svg');
+        height: 50px;
+        width: 165px;
+      }
+
+      #rmit {
+        background: center / contain no-repeat url('assets/RMIT_University_Logo.svg');
+        height: 57px;
+        width: 150px;
+      }
+
+      #monash {
+        background: center / contain no-repeat url('assets/monash-logo-mono.svg');
+        height: 43px;
+        width: 147px;
+      }
+
+      .hide-title {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
   </style>
 </head>
 
 <body>
-  <section>
+  <header>
+    <a name="top"></a>
     <h1 class="title">Ben Kersten</h1>
-    <h2>
-      <a name="contact"></a>Contact</h2>
+    <nav>
+      <ul>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#employment">Employment</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h2><a name="contact"></a>Contact</h2>
+  <address>
     <p>GitHub:
-      <a href="https://github.com/bkersten">bkersten</a>
+      <a href="https://github.com/bkersten" target="_blank" rel="noopener">bkersten</a>
     </p>
     <p>Twitter:
-      <a href="https://twitter.com/ben_kersten">@ben_kersten</a>
+      <a href="https://twitter.com/ben_kersten" target="_blank" rel="noopener">@ben_kersten</a>
     </p>
     <p>Keybase:
-      <a href="https://keybase.io/bkersten">bkersten</a>
+      <a href="https://keybase.io/bkersten" target="_blank" rel="noopener">bkersten</a>
     </p>
+  </address>
+  <section id="summary">
+    <a name="summary"></a>
+    <h2>Summary</h2>
     <div>
-      <h2>Summary</h2>
-      <p>I enjoy solving problems with software and learning how to take advantage of new techniques and technologies. I believe
-        in choosing the right tools for the job in order to deliver a lasting solution within a targeted time-frame. I enjoy
-        working with small teams, mentoring developers, and continuing to learn with my colleagues.</p>
+      <p>I enjoy collaborating to solve difficult problems primarily via the development of software. I believe in investing in
+      people by providing them with the right learning environment, tooling, and time to develop skills and processes, so together we
+      can deliver a lasting solution within a targeted time-frame. I strive to continually be learning how to take advantage
+      of new techniques and technologies. I enjoy working with small teams, mentoring developers, and continuing to learn
+      with my colleagues.</p>
     </div>
-    <div>
+    <section class="skills">
       <h2>Specialties</h2>
-      <ul class="skills">
+      <ul>
         <li>Python</li>
         <li>C++</li>
         <li>C#</li>
@@ -146,241 +307,261 @@
         <li>Desktop Development</li>
         <li>Debugging</li>
         <li>Performance</li>
+        <li>Cross Platform Development</li>
         <li>Network Programming</li>
         <li>Databases</li>
-        <li>DevOps/SRE</li>
+        <li>DevOps</li>
       </ul>
-    </div>
+    </section>
   </section>
-  <section>
+  <section id="employment">
     <h2>
-      <a name="employment"></a>Employment Experience</h2>
-    <section>
-      <h3>
-        <a name="twobulls"></a>Lead Software Developer</h3>
-      <h4>
-        <a href="https://twobulls.com/">Two Bulls</a>
-      </h4>
-      <p class="term">August 2013 &ndash; Present | Melbourne</p>
+      <a name="employment"></a>Employment History</h2>
+    <article>
+      <a name="two-bulls"></a>
+      <h1>
+        Lead Software Developer</h1>
+      <h2 id="two-bulls" class="hide-title">
+        <a href="https://www.twobulls.com/" target="_blank" rel="noreferrer">Two Bulls</a>
+      </h2>
+      <p class="term"><time datetime="2013-08">August 2013</time> &ndash; <strong>Present</strong> | Melbourne</p>
       <ul>
         <li>Lead backend developer and responsible for mentoring and guiding members of the backend chapter.</li>
-        <li>Core developer of a cross platform video distribution and playback service. Primarily responsible for hardware accelerated
-          h.264 decoder implementation on Windows, iOS, tvOS, and macOS. Implemented asynchronous networking layer.
+        <li>Core developer of a cross platform video distribution and playback service. Primarily responsible for hardware accelerated h.264 decoder implementations on Windows, iOS, tvOS, macOS, and Android. Implemented asynchronous networking layer.
         </li>
-        <li>Was part of the development team that delivered a distributed IoT rules engine, on Android, iOS, OpenWRT, and macOS,
-          for a major telecommunications provider.</li>
-        <li>Network developer on multiple mobile projects, including the Blokify 3D printing app.</li>
-        <li>Was part of the team that delivered
-          <a href="https://www.youtube.com/watch?v%3DuKX-ksByiq0">Grovers Block Party</a>, an AR educational play experience built for Sesame Workshop and Qualcomm, developed using
-          Unity. Primarily responsible for detection of object arrangement as event triggers.</li>
-        <li>Lead proponent of CI/CD, automation, and uniform development environments and production environments in order to
-          achieve correct, repeatable product launches and updates.</li>
+        <li>Was part of the development team that delivered a distributed IoT rules engine, on Android, iOS, OpenWRT, and macOS, for a major telecommunications provider.</li>
+        <li>Network developer on multiple mobile projects, including the <strong>Blokify</strong> 3D printing app.</li>
+        <li>Was part of the team that delivered <strong><a href="https://www.youtube.com/watch?v%3DuKX-ksByiq0">Grovers Block Party</a></strong>, an AR educational play experience built for Sesame Workshop and Qualcomm, developed using Unity. Primarily responsible for detection of object arrangement as event triggers.</li>
+        <li>Lead proponent of CI/CD, automation, and uniform development environments and production environments in order to achieve correct, repeatable product launches and updates.</li>
       </ul>
-      <ul class="skills">
-        <li>Python</li>
-        <li>C</li>
-        <li>C++</li>
-        <li>C#</li>
-        <li>Django</li>
-        <li>asp.net core</li>
-        <li>Docker</li>
-        <li>Redis</li>
-        <li>AWS</li>
-        <li>Microsoft Azure</li>
-        <li>Terraform</li>
-        <li>Ansible</li>
-        <li>iOS</li>
-        <li>macOS</li>
-        <li>Windows</li>
-        <li>Objective-C</li>
-        <li>Swift</li>
-        <li>PostgreSQL</li>
-        <li>git</li>
-        <li>Jenkins</li>
-      </ul>
-    </section>
-    <section>
-      <h3>
-        <a name="dius"></a>Software Developer</h3>
-      <h4>
-        <a href="http://dius.com.au/">DiUS Computing</a>
-      </h4>
-      <p class="term">August 2012 &ndash; August 2013 | Melbourne</p>
+      <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>Python</li>
+          <li>C</li>
+          <li>C++</li>
+          <li>C#</li>
+          <li>Django</li>
+          <li>asp.net core</li>
+          <li>Docker</li>
+          <li>Redis</li>
+          <li>AWS</li>
+          <li>Microsoft Azure</li>
+          <li>Terraform</li>
+          <li>Ansible</li>
+          <li>iOS</li>
+          <li>macOS</li>
+          <li>Windows</li>
+          <li>Objective-C</li>
+          <li>Swift</li>
+          <li>PostgreSQL</li>
+          <li>git</li>
+          <li>Jenkins</li>
+        </ul>
+      </section>
+    </article>
+    <article>
+      <a name="dius"></a>
+      <h1>
+        Software Developer</h1>
+      <h2 id="dius" class="hide-title">
+        <a href="https://dius.com.au/" target="_blank" rel="noreferrer">DiUS Computing</a>
+      </h2>
+      <p class="term"><time datetime="2012-08">August 2012</time> &ndash; <time datetime="2013-08">August 2013</time> |
+        Melbourne</p>
       <ul>
-        <li>Designed and developed a service that acts as a facade to a third party proprietary platform, in order to enhance
-          and extend its capabilities.</li>
-        <li>Was part of the development team producing an iOS app for one of Australia's most recognised brands. Focused heavily
-          on development of security features.</li>
-        <li>Developed an interactive web application for the
-          <a href="http://dius.com.au/our-products/">PowerVu</a> embedded device, with limited storage constraints of &lt;200KB.</li>
+        <li>Designed and developed a service that acts as a facade to a third party proprietary platform, in order to enhance and extend its capabilities.</li>
+        <li>Was part of the development team producing an iOS app for one of Australia's most recognised brands. Focused heavily on development of security features.</li>
+        <li>Developed an interactive web application for the <strong>PowerVu</strong> embedded device, with limited storage constraints of under 200&nbsp;KB.</li>
       </ul>
-      <ul class="skills">
-        <li>Groovy</li>
-        <li>Grails</li>
-        <li>JavaScript</li>
-        <li>iOS</li>
-        <li>Objective-C</li>
-      </ul>
-    </section>
-    <section>
-      <h3>
-        <a name="amazon"></a>Software Development Engineer II</h3>
-      <h4>
-        <a href="http://amazon.com">Amazon</a>
-      </h4>
-      <p class="term">February 2012 &ndash; July 2012 | Seattle</p>
+      <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>Groovy</li>
+          <li>Grails</li>
+          <li>JavaScript</li>
+          <li>iOS</li>
+          <li>Objective-C</li>
+        </ul>
+      </section>
+    </article>
+    <article>
+      <a name="amazon"></a>
+      <h1>
+        Software Development Engineer</h1>
+      <h2 id="amazon" class="hide-title">
+        <a href="https://www.amazon.com/" target="_blank" rel="noreferrer">Amazon</a>
+      </h2>
+      <p class="term"><time datetime="2012-02">February 2012</time> &ndash; <time datetime="2012-07">July 2012</time> |
+        Seattle</p>
       <ul>
         <li>Prototyped developer tools to measure the frontend performance impact of changes to the retail website.</li>
         <li>Prototyped a frontend verification tool to ensure conformity to a sites style guide.</li>
-        <li>Back-ported WebKit's implementation of the Navigation Timing API for use in QtWebKit/PhantomJS.</li>
+        <li>Back-ported WebKit's implementation of the <em>Navigation Timing API</em> for use in <strong>QtWebKit/PhantomJS.</strong></li>
       </ul>
-      <ul class="skills">
-        <li>C++</li>
-        <li>JavaScript</li>
-      </ul>
-    </section>
-    <section>
-      <h3>
-        <a name="quest"></a>Software Developer</h3>
-      <h4>
-        <a href="https://www.quest.com">Quest Software</a>
-      </h4>
-      <p>August 2010 &ndash; February 2012 | Melbourne</p>
-      <p>Was part of the Toad for Cloud Databases team, providing a data hub solution to allow people with SQL knowledge to
-        query NoSQL databases in an easy and familiar way.</p>
+      <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>C++</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+    </article>
+    <article>
+      <a name="quest"></a>
+      <h1>
+        Software Developer</h1>
+      <h2 id="quest" class="hide-title">
+        <a href="https://www.quest.com/" target="_blank" rel="noreferrer">Quest Software</a>
+      </h2>
+      <p><time datetime="2010-08">August 2010</time> &ndash; <time datetime="2012-02">February 2012</time> | Melbourne</p>
+      <p>Was part of the <strong>Toad for Cloud Databases</strong> team, providing a data hub solution to allow people with SQL knowledge to query NoSQL databases in an easy and familiar way.</p>
       <ul>
-        <li>Primarily responsible for the development of a MySQL database proxy for Linux and Windows, used to perform optimizations
-          of heterogeneous queries. The data hub proxy was a core component in Toad for Data Analysts 3.0, Toad for Cloud
-          Databases, and Quest Business Intelligence Studio.</li>
-        <li>Contributing developer to a MySQL storage engine, which provided a method for querying NoSQL and Cloud database services
-          with SQL.</li>
+        <li>Primarily responsible for the development of a <strong>MySQL</strong> database proxy for Linux and Windows, used to perform optimizations of heterogeneous queries. The data hub proxy was a core component in <strong>Toad for Data Analysts 3.0</strong>, Toad for Cloud Databases, and <strong>Quest Business Intelligence Studio</strong>.</li>
+        <li>Contributing developer to a MySQL storage engine, which provided a method for querying NoSQL and Cloud database services with SQL.</li>
         <li>Contributed bug fixes to the MySQL and Drizzle open source projects.</li>
       </ul>
-      <ul class="skills">
-        <li>C</li>
-        <li>C++</li>
-        <li>Lua</li>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>HiveQL</li>
-        <li>Linux</li>
-        <li>Windows</li>
-        <li>git</li>
-        <li>MySQL</li>
-      </ul>
-    </section>
-    <section>
-      <h3>
-        <a name="infinite"></a>Senior Software Engineer</h3>
-      <h4>
-        <a href="http://www.infinite-interactive.com">Infinite Interactive</a>
-      </h4>
-      <p class="term">October 2007 &ndash; August 2010 | Melbourne</p>
-      <p>As a member of the Game Engine team, my role included adding new features to the engine and exposing them to Lua for
-        the game play programmers, as well as maintenance and performance improvements.</p>
+      <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>C</li>
+          <li>C++</li>
+          <li>Lua</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>HiveQL</li>
+          <li>Linux</li>
+          <li>Windows</li>
+          <li>git</li>
+          <li>MySQL</li>
+        </ul>
+      </section>
+    </article>
+    <article>
+      <a name="infinite"></a>
+      <h1>
+        Senior Software Engineer</h1>
+      <h2>
+        Infinite Interactive
+      </h2>
+      <p class="term"><time datetime="2007-10">October 2007</time> &ndash; <time datetime="2010-08">August 2010</time>
+        | Melbourne</p>
+      <p>As a member of the Game Engine team, my role included adding new features to the engine and exposing them to Lua for the game play programmers, as well as maintenance and performance improvements.</p>
       <ul>
         <li>Developed the multiplayer networking system for PSP, Xbox 360 and PC.</li>
-        <li>Designed and implemented our engines game object serialization system, which included bit packing of annotated attributes
-          for more efficient memory usage on hand-held devices.</li>
+        <li>Designed and implemented our engines game object serialization system, which included bit packing of annotated attributes for more efficient memory usage on hand-held devices.</li>
         <li>Implemented a save game system for PSP, Xbox 360, PC, and Wii that complied with each platforms certification requirements.
         </li>
-        <li>Primary developer responsible for development and project troubleshooting on the Xbox 360. Played a secondary role
-          in porting our engine to the Nintendo Wii and Sony PlayStation Portable platforms.</li>
+        <li>Primary developer responsible for development and project troubleshooting on the Xbox 360. Played a secondary role in porting our engine to the Nintendo Wii and Sony PlayStation Portable platforms.</li>
         <li>Created a prototype NPAPI browser plugin version of our engine, in downtime between projects.</li>
-        <li>Performed last minute optimizations of game specific code on numerous occasions. Including a rewrite of the gem matching
-          algorithm in Lua for Puzzle Quest 2; Improving its performance on the PSP from 6 seconds down to 150ms.</li>
+        <li>Performed last minute optimizations of game specific code on numerous occasions. Including a rewrite of the gem matching algorithm in Lua for Puzzle Quest 2; Improving its performance on the PSP from 6 seconds down to 150ms.</li>
       </ul>
       <p>Titles worked on include:</p>
       <ul>
-        <li>Puzzle Quest: CotW: Revenge of the Plague Lord (Xbox 360)</li>
-        <li>Neopets Puzzle Adventure (Nintendo Wii/PC)</li>
-        <li>Puzzle Kingdoms (Nintendo Wii/Nintendo DS/PC)</li>
-        <li>Puzzle Quest: Galactrix (Xbox 360/Nintendo DS/PC)</li>
-        <li>Puzzle Chronicles (Xbox 360/Nintendo DS/Sony PlayStation Portable/PC)</li>
-        <li>Puzzle Quest 2 (Xbox 360/Nintendo DS/Sony PlayStation Portable/PC)</li>
-        <li>Unrealized Project (Xbox 360/PC)</li>
-        <li>Dragon Rush (Facebook/web browser plugin)</li>
+        <li>Puzzle Quest: CotW: Revenge of the Plague Lord <span style="font-weight: 300;">(Xbox 360)</span></li>
+        <li>Neopets Puzzle Adventure <span style="font-weight: 300;">(Nintendo Wii/PC)</span></li>
+        <li>Puzzle Kingdoms <span style="font-weight: 300;">(Nintendo Wii/Nintendo DS/PC)</span></li>
+        <li>Puzzle Quest: Galactrix <span style="font-weight: 300;">(Xbox 360/Nintendo DS/PC)</span></li>
+        <li>Puzzle Chronicles <span style="font-weight: 300;">(Xbox 360/Nintendo DS/Sony PlayStation Portable/PC)</span></li>
+        <li>Puzzle Quest 2 <span style="font-weight: 300;">(Xbox 360/Nintendo DS/Sony PlayStation Portable/PC)</span></li>
+        <li>Unrealized Project <span style="font-weight: 300;">(Xbox 360/PC)</span></li>
+        <li>Dragon Rush <span style="font-weight: 300;">(Facebook/web browser plugin)</span></li>
       </ul>
-      <ul class="skills">
-        <li>C</li>
-        <li>C++</li>
-        <li>Lua</li>
-        <li>Python</li>
-        <li>Xbox 360</li>
-        <li>Nintento DS</li>
-        <li>Nintendo Wii</li>
-        <li>Sony PSP</li>
-        <li>Steam</li>
-        <li>Windows</li>
-      </ul>
-    </section>
-    <section>
-      <h3>
-        <a name="august"></a>Web Developer</h3>
-      <h4>
-        <a href="https://www.august.com.au">August</a>
-      </h4>
-      <p class="term">August 2006 &ndash; October 2007 | Melbourne</p>
-      <p>I was asked to join August as a contractor shortly after their founding, and became a full time staff member after
-        completing my degree at RMIT University.</p>
-      <ul class="skills">
-        <li>PHP</li>
-        <li>SQL</li>
-        <li>JavaScript</li>
-        <li>ActionScript 3</li>
-        <li>CSS</li>
-      </ul>
-    </section>
-    <section>
-      <h3>
-        <a name="alkemi"></a>Web Developer</h3>
-      <h4>
+      <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>C</li>
+          <li>C++</li>
+          <li>Lua</li>
+          <li>Python</li>
+          <li>Xbox 360</li>
+          <li>Nintendo DS</li>
+          <li>Nintendo Wii</li>
+          <li>Sony PSP</li>
+          <li>Steam</li>
+          <li>Windows</li>
+        </ul>
+      </section>
+    </article>
+    <article>
+      <a name="august"></a>
+      <h1>
+        Web Developer</h1>
+      <h2 id="august" class="hide-title">
+        <a href="https://www.august.com.au" target="_blank" rel="noreferrer">August</a>
+      </h2>
+      <p class="term"><time datetime="2006-08">August 2006</time> &ndash; <time datetime="2007-10">October 2007</time>
+        | Melbourne</p>
+      <p>I was asked to join August as a contractor shortly after their founding, and became a full time staff member after completing my degree at <strong>RMIT University.</strong></p>
+      <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>PHP</li>
+          <li>SQL</li>
+          <li>JavaScript</li>
+          <li>ActionScript 3</li>
+          <li>CSS</li>
+        </ul>
+      </section>
+    </article>
+    <article>
+      <a name="alkemi"></a>
+      <h1>
+        Web Developer</h1>
+      <h2>
         Alkemi International
-      </h4>
-      <p class="term">June 2003 &ndash; August 2005 | Melbourne</p>
-      <p>I began working as a junior developer at Alkemi after being recommended by my lecturer at Monash University. I maintained
-        a relationship with the company for many years and over time became lead developer.</p>
-      <ul class="skills">
-        <li>PHP</li>
-        <li>ASP/VBScript</li>
-        <li>ColdFusion</li>
-        <li>SQL</li>
-        <li>JavaScript</li>
-      </ul>
-    </section>
+      </h2>
+      <p class="term"><time datetime="2003-06">June 2003</time> &ndash; <time datetime="2005-08">August 2005</time> |
+        Melbourne</p>
+      <p>I began working as a junior developer at Alkemi after being recommended by my lecturer at <strong>Monash University.</strong> I maintained a relationship with the company for many years and over time became lead developer.</p>
+      <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>PHP</li>
+          <li>ASP/VBScript</li>
+          <li>ColdFusion</li>
+          <li>SQL</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+    </article>
   </section>
-  <section>
+  <section id="education">
     <h2>
       <a name="education"></a>Education</h2>
-    <section>
-      <h3>
-        <a name="rmit"></a>RMIT University</h3>
-      <h4>Bachelor of Applied Science, Computer Science</h4>
-      <p class="term">2004 &ndash; 2006 | Melbourne</p>
-      <p>The majority of software development subjects at RMIT were completed using C and Java and were targeted at the Solaris
-        operating system. I focused my studies on game development, databases, software development practices and methodologies,
-        and programming languages.</p>
-      <ul class="skills">
-        <li>Java</li>
-        <li>C</li>
-        <li>C++</li>
-        <li>Python</li>
-        <li>Perl</li>
-        <li>VB.NET</li>
-        <li>Transact-SQL</li>
-        <li>M68K assembly</li>
-        <li>Solaris</li>
-      </ul>
-    </section>
-    <section>
-      <h3>
-        <a name="monash"></a>Monash University</h3>
-      <h4>Multimedia Computing</h4>
-      <p class="term">2002 &ndash; 2003 | Berwick</p>
-      <p>I studied Multimedia Computing at Monash University for two years before deciding to switch to Computer Science at
-        RMIT University.</p>
-    </section>
+    <article>
+      <a name="rmit"></a>
+      <h1>Bachelor of Applied Science, Computer Science</h1>
+      <h2 id="rmit" class="hide-title">
+        <a href="https://www.rmit.edu.au/" target="_blank" rel="noreferrer">RMIT University</a></h2>
+      <p class="term"><time datetime="2004">2004</time> &ndash; <time datetime="2006">2006</time> | Melbourne</p>
+      <p>The majority of software development subjects at RMIT were completed using C and Java and were targeted at the Solaris operating system. I focused my studies on game development, databases, software development practices and methodologies, and programming languages.</p>
+      <section class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>Java</li>
+          <li>C</li>
+          <li>C++</li>
+          <li>Python</li>
+          <li>Perl</li>
+          <li>VB.NET</li>
+          <li>Transact-SQL</li>
+          <li>M68K assembly</li>
+          <li>Solaris</li>
+        </ul>
+      </section>
+    </article>
+    <article>
+      <a name="monash"></a>
+      <h1>Multimedia Computing</h1>
+      <h2 id="monash" class="hide-title"><a href="https://www.monash.edu/" target="_blank" rel="noreferrer">Monash University</a></h2>
+      <p class="term"><time datetime="2002">2002</time> &ndash; <time datetime="2003">2003</time> | Berwick</p>
+      <p>I studied Multimedia Computing at Monash University for two years, where I gained an interest in games development. I decided to pursue the possibility of a career programming games by switching to Computer Science at RMIT University.</p>
+    </article>
   </section>
+  <nav>
+    <span id="top-link"><a href="#top">back to top</a></span>
+  </nav>
 </body>
 
 </html>
