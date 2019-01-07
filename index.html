@@ -17,15 +17,17 @@
       font-family: 'Fira Sans', sans-serif;
       font-display: fallback;
       color: #000;
+      background-color: #fff;
     }
 
     .title {
-      padding-top: 24pt;
+      padding-top: 16pt;
       font-weight: bold;
       font-size: 36pt;
       padding-bottom: 6pt;
       font-family: 'Fira Sans', sans-serif;
       text-align: left;
+      margin-top: 0;
     }
 
     li {
@@ -76,6 +78,16 @@
       text-transform: uppercase;
     }
 
+    article h4 {
+      padding-top: 8pt;
+      color: #333;
+      font-weight: bold;
+      font-size: medium;
+      padding-bottom: 4pt;
+      text-align: left;
+      margin: 0;
+    }
+
     h1 > a,
     h2 > a,
     h3 > a,
@@ -103,13 +115,16 @@
 
       * {
         color: #000;
-        background-color: #fff;
-        @include box-shadow(none);
-        @include text-shadow(none);
       }
 
       body {
         width: 90%;
+        background-color: #fff;
+      }
+
+      #employment > h2,
+      #education > h2 {
+        page-break-before: always;
       }
 
       .title {
@@ -120,6 +135,7 @@
         columns: 3;
       }
 
+      .noprint,
       nav {
         visibility: hidden;
         display: none;
@@ -135,8 +151,8 @@
         content: " (" attr(href) ")";
       }
 
+      article,
       li,
-      section,
       p {
         page-break-inside: avoid;
       }
@@ -200,7 +216,6 @@
       #top-link a:hover {
         text-decoration: underline;
       }
-
     }
 
     time {
@@ -255,6 +270,47 @@
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
+      }
+    }
+
+    .collapsible > input[type="checkbox"] {
+      display: none;
+    }
+
+    .collapsible > input[type="checkbox"] + label {
+      cursor: pointer;
+      display: block;
+      font-weight: bold;
+      border-bottom: 1px dashed #ccc;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    @media print {
+      .collapsible iframe {
+        display: none;
+      }
+    }
+
+    @media only screen {
+      .collapsible label span.icon {
+        float: right;
+      }
+
+      .collapsible label span.icon:after {
+        content: '+';
+      }
+
+      .collapsible input:checked + label span.icon:after {
+        content: '-';
+      }
+
+      .collapsible article {
+        display: none;
+      }
+
+      .collapsible input:checked ~ article {
+        display: block;
       }
     }
 
@@ -317,7 +373,7 @@
   <section id="employment">
     <h2>
       <a name="employment"></a>Employment History</h2>
-    <article>
+    <article style="page-break-inside: auto">
       <a name="two-bulls"></a>
       <h1>
         Lead Software Developer</h1>
@@ -326,13 +382,10 @@
       </h2>
       <p class="term"><time datetime="2013-08">August 2013</time> &ndash; <strong>Present</strong> | Melbourne</p>
       <ul>
-        <li>Lead backend developer and responsible for mentoring and guiding members of the backend chapter.</li>
-        <li>Core developer of a cross platform video distribution and playback service. Primarily responsible for hardware accelerated h.264 decoder implementations on Windows, iOS, tvOS, macOS, and Android. Implemented asynchronous networking layer.
-        </li>
-        <li>Was part of the development team that delivered a distributed IoT rules engine, on Android, iOS, OpenWRT, and macOS, for a major telecommunications provider.</li>
-        <li>Network developer on multiple mobile projects, including the <strong>Blokify</strong> 3D printing app.</li>
-        <li>Was part of the team that delivered <strong><a href="https://www.youtube.com/watch?v%3DuKX-ksByiq0">Grovers Block Party</a></strong>, an AR educational play experience built for Sesame Workshop and Qualcomm, developed using Unity. Primarily responsible for detection of object arrangement as event triggers.</li>
-        <li>Lead proponent of CI/CD, automation, and uniform development environments and production environments in order to achieve correct, repeatable product launches and updates.</li>
+        <li>Backend chapter lead with a responsibility for mentoring and guiding its members.</li>
+        <li>Lead backend developer for numerous mobile and web applications.</li>
+        <li>Individually contributed to many innovative products from Augmented Reality, IoT, mobile Bluetooth peripherals, and video distribution.</li>
+        <li>Lead proponent of CI/CD, automation, and uniform development and production environments in order to achieve correct, repeatable product launches and updates.</li>
       </ul>
       <section class="skills">
         <h3>Skills</h3>
@@ -342,7 +395,7 @@
           <li>C++</li>
           <li>C#</li>
           <li>Django</li>
-          <li>asp.net core</li>
+          <li>ASP.Net Core</li>
           <li>Docker</li>
           <li>Redis</li>
           <li>AWS</li>
@@ -356,8 +409,136 @@
           <li>Swift</li>
           <li>PostgreSQL</li>
           <li>git</li>
-          <li>Jenkins</li>
         </ul>
+      </section>
+      <section class="feature collapsible">
+        <input id="_twobulls_feature" type="checkbox">
+        <label for="_twobulls_feature">Featured Projects<span class="icon"></span></label>
+        <article>
+          <h4>Vividas</h4>
+          <p><time datetime="2017">2017</time> &ndash; <time datetime="2018">2018</time></p>
+          <p>Cross platform video distribution and playback service for mobile and desktop. Strongly focused on performance and power efficiency for mobile devices.</p>
+          <ul>
+            <li>Core developer of cross platform video playback SDK <span style="font-weight: 300;">(Windows, iOS, tvOS, macOS, and Android)</span></li>
+            <li>Responsible for hardware accelerated h.264 decoder implementations</li>
+            <li>Asynchronous networking</li>
+          </ul>
+          <section class="skills noprint">
+            <ul>
+              <li>C++</li>
+              <li>Swift</li>
+              <li>C#</li>
+              <li>Kotlin</li>
+              <li>JNI</li>
+              <li>DXVA 2.0</li>
+              <li>VideoToolbox</li>
+              <li>curl</li>
+            </ul>
+          </section>
+        </article>
+        <article>
+          <h4>Cartewheel</h4>
+          <p><time datetime="2016">2016</time> &ndash; <time datetime="2018">2018</time></p>
+          <p>A web application that helps dietitians plan menus that meet USDA National School Lunch Program compliance standards.</p>
+          <ul>
+            <li>Lead developer and solution architect during initial phase of project</li>
+            <li>Performed SRE duties, and addressed performance concerns and availability of web application service later in delivery</li>
+          </ul>
+          <section class="skills noprint">
+            <ul>
+              <li>C#</li>
+              <li>ASP.Net Core</li>
+              <li>Azure</li>
+              <li>ARM Templates</li>
+              <li>SQL Server</li>
+              <li>Docker</li>
+            </ul>
+          </section>
+        </article>
+        <article>
+          <h4>ATF Vision</h4>
+          <p><time datetime="2015">2015</time> &ndash; <time datetime="2019">2019</time></p>
+          <p>ATF Vision provides intelligent video surveillance camera solutions for temporary security camera and construction site monitoring. The app gives customers instant access to their surveillance camera and allows them to view and control their site security.</p>
+          <ul>
+            <li>Solution Architect for backend service of mobile and web applications</li>
+            <li>Ongoing service maintenance and improvements</li>
+          </ul>
+        </article>
+        <article>
+          <h4>Higgns</h4>
+          <p><time datetime="2015">2015</time> &ndash; <time datetime="2016">2016</time></p>
+          <p>A distributed IoT rules engine for controlling your homes various devices with triggers and schedules.</p>
+          <ul>
+            <li>Core developer of embedded SDK <span style="font-weight: 300;">(OpenWRT, iOS, macOS, and Android)</span></li>
+            <li>Responsible for the data access layer</li>
+            <li>Integrated a preview version of the <strong>AllJoyn Security 2.0</strong> protocol.</li>
+            <li>Presented to the <strong>AllSeen Alliance</strong> on using Security 2.0 from a developers perspective.</li>
+          </ul>
+          <section class="skills noprint">
+            <ul>
+              <li>C++</li>
+              <li>sqlite</li>
+              <li>Android</li>
+            </ul>
+          </section>
+        </article>
+        <article>
+          <h4>AirSonea</h4>
+          <p><time datetime="2014">2014</time> &ndash; <time datetime="2015">2015</time></p>
+          <p>An app coupled with a specialized device to record and then analyze breathing sounds for the presence of wheeze, an important sign of air flow obstruction in asthma.</p>
+          <ul>
+            <li>Backend service developer</li>
+            <li>iOS developer responsible for Bluetooth communication with device</li>
+          </ul>
+          <section class="skills noprint">
+            <ul>
+              <li>Objective-C</li>
+              <li>iOS</li>
+              <li>Python</li>
+              <li>Django</li>
+              <li>AWS VPC</li>
+              <li>EC2</li>
+              <li>RDS</li>
+              <li>S3</li>
+              <li>ElastiCache</li>
+              <li>Ansible</li>
+            </ul>
+          </section>
+        </article>
+        <article>
+          <h4>Grovers Block Party</h4>
+          <p><time datetime="2013">2013</time></p>
+          <p>An educational play experience using <strong>Augmented Reality</strong> built for Sesame Workshop in collaboration with Qualcomm.</p>
+          <ul>
+            <li>Responsible for detection of block arrangements and event triggers.</li>
+          </ul>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKX-ksByiq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <section class="skills noprint">
+            <ul>
+              <li>C#</li>
+              <li>Unity</li>
+              <li>Vuforia</li>
+            </ul>
+          </section>
+        </article>
+      </section>
+      <section class="training collapsible">
+        <input id="_twobulls_training" type="checkbox">
+        <label for="_twobulls_training">Training &amp; Certification<span class="icon"></span></label>
+        <article>
+          <h4>Seth &amp; Ken's Excellent Adventures in Secure Code Review</h4>
+          <p><a href="https://twitter.com/cktricky" target="_blank" rel="noreferrer">Ken Johnson</a> and <a href="https://twitter.com/sethlaw" target="_blank" rel="noreferrer">Seth Law</a></p>
+          <p>OWASP AppSec Day <time datetime="2018">2018</time> | Melbourne</p>
+        </article>
+        <article>
+          <h4>Bughunting bootcamp - Discovering 0day</h4>
+          <p><a href="https://twitter.com/wireghoul" target="_blank" rel="noreferrer">Eldar Marcussen</a></p>
+          <p>OWASP AppSec Day <time datetime="2017">2017</time> | Melbourne</p>
+        </article>
+        <article>
+          <h4>AWS Certified Solution Architect - Associate</h4>
+          <p><time datetime="2015">2015</time></p>
+        </article>
       </section>
     </article>
     <article>
@@ -367,8 +548,7 @@
       <h2 id="dius" class="hide-title">
         <a href="https://dius.com.au/" target="_blank" rel="noreferrer">DiUS Computing</a>
       </h2>
-      <p class="term"><time datetime="2012-08">August 2012</time> &ndash; <time datetime="2013-08">August 2013</time> |
-        Melbourne</p>
+      <p class="term"><time datetime="2012-08">August 2012</time> &ndash; <time datetime="2013-08">August 2013</time> | Melbourne</p>
       <ul>
         <li>Designed and developed a service that acts as a facade to a third party proprietary platform, in order to enhance and extend its capabilities.</li>
         <li>Was part of the development team producing an iOS app for one of Australia's most recognised brands. Focused heavily on development of security features.</li>
@@ -392,8 +572,7 @@
       <h2 id="amazon" class="hide-title">
         <a href="https://www.amazon.com/" target="_blank" rel="noreferrer">Amazon</a>
       </h2>
-      <p class="term"><time datetime="2012-02">February 2012</time> &ndash; <time datetime="2012-07">July 2012</time> |
-        Seattle</p>
+      <p class="term"><time datetime="2012-02">February 2012</time> &ndash; <time datetime="2012-07">July 2012</time> | Seattle</p>
       <ul>
         <li>Prototyped developer tools to measure the frontend performance impact of changes to the retail website.</li>
         <li>Prototyped a frontend verification tool to ensure conformity to a sites style guide.</li>
@@ -436,6 +615,18 @@
           <li>MySQL</li>
         </ul>
       </section>
+      <section class="feature collapsible">
+        <input id="_quest_feature" type="checkbox">
+        <label for="_quest_feature">Featured Projects<span class="icon"></span></label>
+        <article>
+          <h4>Toad Data Hub</h4>
+          <p>Receives the SQL statements submitted by the user through Toad Client, translates them into the appropriate API calls to fetch or update data in the designated cloud database, and returns the results in the familiar tabular format of rows and columns. It dramatically simplifies access and management of non-relational data stored in the cloud. It puts NoSQL databases within reach of RDBMS developers and DBAs.</p>
+          <ul>
+            <li>Responsible for the MySQL database proxy which transformed SQL queries to optimize performance.</li>
+            <li>Maintained and extended the MySQL storage engine used to query NoSQL data sources.</li>
+          </ul>
+        </article>
+      </section>
     </article>
     <article>
       <a name="infinite"></a>
@@ -444,14 +635,12 @@
       <h2>
         Infinite Interactive
       </h2>
-      <p class="term"><time datetime="2007-10">October 2007</time> &ndash; <time datetime="2010-08">August 2010</time>
-        | Melbourne</p>
+      <p class="term"><time datetime="2007-10">October 2007</time> &ndash; <time datetime="2010-08">August 2010</time> | Melbourne</p>
       <p>As a member of the Game Engine team, my role included adding new features to the engine and exposing them to Lua for the game play programmers, as well as maintenance and performance improvements.</p>
       <ul>
         <li>Developed the multiplayer networking system for PSP, Xbox 360 and PC.</li>
         <li>Designed and implemented our engines game object serialization system, which included bit packing of annotated attributes for more efficient memory usage on hand-held devices.</li>
-        <li>Implemented a save game system for PSP, Xbox 360, PC, and Wii that complied with each platforms certification requirements.
-        </li>
+        <li>Implemented a save game system for PSP, Xbox 360, PC, and Wii that complied with each platforms certification requirements.</li>
         <li>Primary developer responsible for development and project troubleshooting on the Xbox 360. Played a secondary role in porting our engine to the Nintendo Wii and Sony PlayStation Portable platforms.</li>
         <li>Created a prototype NPAPI browser plugin version of our engine, in downtime between projects.</li>
         <li>Performed last minute optimizations of game specific code on numerous occasions. Including a rewrite of the gem matching algorithm in Lua for Puzzle Quest 2; Improving its performance on the PSP from 6 seconds down to 150ms.</li>
@@ -481,6 +670,26 @@
           <li>Steam</li>
           <li>Windows</li>
         </ul>
+      </section>
+      <section class="feature collapsible">
+        <input id="_infinite_feature" type="checkbox">
+        <label for="_infinite_feature">Featured Projects<span class="icon"></span></label>
+        <article>
+          <h4>Puzzle Quest 2</h4>
+          <p>Released in <time datetime="2010-06">June 2010</time></p>
+          <ul>
+            <li>Primarily responsible for Xbox 360 engine development</li>
+            <li>Multiplayer networking</li>
+          </ul>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/97SeWQQyuQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <section class="skills noprint">
+            <ul>
+              <li>C</li>
+              <li>C++</li>
+              <li>Lua</li>
+            </ul>
+          </section>
+        </article>
       </section>
     </article>
     <article>
