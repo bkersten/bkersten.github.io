@@ -7,7 +7,9 @@
   <meta name="description" content="Principal Software Developer of backend services at Two Bulls in Melbourne">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style type="text/css">
     body {
       max-width: 940px;
@@ -88,10 +90,10 @@
       margin: 0;
     }
 
-    h1 > a,
-    h2 > a,
-    h3 > a,
-    h4 > a {
+    h1>a,
+    h2>a,
+    h3>a,
+    h4>a {
       color: inherit;
       text-decoration: none;
       display: block;
@@ -122,8 +124,8 @@
         background-color: #fff;
       }
 
-      #employment > h2,
-      #education > h2 {
+      #employment>h2,
+      #education>h2 {
         page-break-before: always;
       }
 
@@ -194,7 +196,7 @@
         display: inline-block;
       }
 
-      nav li + li:before {
+      nav li+li:before {
         content: " / ";
       }
 
@@ -223,6 +225,11 @@
     }
 
     @media only screen and (min-width: 375px) {
+      #google {
+        background: center / contain no-repeat url('assets/google_logo.svg');
+        height: 60px;
+        width: 178px;
+      }
 
       #two-bulls {
         background: center / contain no-repeat url('assets/twobulls_logo-type.png');
@@ -296,9 +303,6 @@
     <p>GitHub:
       <a href="https://github.com/bkersten" target="_blank" rel="noopener">bkersten</a>
     </p>
-    <p>Twitter:
-      <a href="https://twitter.com/ben_kersten" target="_blank" rel="noopener">@ben_kersten</a>
-    </p>
     <p>LinkedIn:
       <a href="https://au.linkedin.com/in/benkersten" target="_blank" rel="noopener">ben kersten</a>
     </p>
@@ -307,11 +311,11 @@
     <a name="summary"></a>
     <h2>Summary</h2>
     <div>
-      <p>I solve hard problems via collaborative development of software. I believe in investing in people by providing them with
-      a safe learning environment, growth opportunities, and coaching to develop skills and processes, so together we can
-      deliver a lasting solution within a targeted time-frame. I strive to continually be learning how to take advantage of
-      new techniques and technologies. I enjoy building high performance teams, mentoring, and continuously learning with my
-      colleagues.</p>
+      <p>I solve hard problems via collaborative development of software. I believe in investing in people by providing
+        them with a safe learning environment, growth opportunities, and coaching to develop skills and processes, so
+        together we can deliver a lasting solution within a targeted time-frame. I strive to continually be learning how
+        to take advantage of new techniques and technologies. I enjoy building high performance teams, mentoring, and
+        continuously learning with my colleagues.</p>
     </div>
     <section class="skills">
       <h2>Technical Proficiencies</h2>
@@ -333,50 +337,68 @@
         <li>Network Programming</li>
         <li>Data-Oriented Design</li>
         <li>Performance &amp; Debugging</li>
-        <li>Testing</li>
       </ul>
     </section>
   </section>
   <section id="employment">
     <h2>
-      <a name="employment"></a>Professional History</h2>
-      <article style="page-break-inside: auto">
-        <a name="planet-innovation"></a>
-        <h1>
-          Principal Software Engineer</h1>
-        <h2 id="planet-innovation">
-          <a href="https://planetinnovation.com/" target="_blank" rel="noreferrer">Planet Innovation</a>
-        </h2>
-        <p class="term"><time datetime="2021-04">April 2021</time> &ndash; <strong>Present</strong> | Melbourne</p>
+      <a name="employment"></a>Professional History
+    </h2>
+    <article style="page-break-inside: auto">
+      <a name="google"></a>
+      <h1>
+        Staff Software Engineer</h1>
+      <h2 id="google" class="hide-title">
+        <a href="https://google.com/" target="_blank" rel="noreferrer">Google</a>
+      </h2>
+      <p class="term"><time datetime="2022-05">May 2022</time> &ndash; <strong>Present</strong> | Melbourne</p>
+      <section class="skills noprint">
+        <h3>Skills</h3>
         <ul>
-          <li>Project Lead on an embedded linux based product.</li>
+          <li>Python</li>
+          <li>C++</li>
         </ul>
-        <section class="skills">
-          <h3>Skills</h3>
-          <ul>
-            <li>Python</li>
-            <li>Go</li>
-          </ul>
-        </section>
-      </article>
+      </section>
+    </article>
+    <article style="page-break-inside: auto">
+      <a name="planet-innovation"></a>
+      <h1>
+        Principal Software Engineer</h1>
+      <h2 id="planet-innovation">
+        <a href="https://planetinnovation.com/" target="_blank" rel="noreferrer">Planet Innovation</a>
+      </h2>
+      <p class="term"><time datetime="2021-04">April 2021</time> &ndash; <time datetime="2022-05">May 2022</time> |
+        Melbourne</p>
+      <ul>
+        <li>Project Lead on an embedded linux based product.</li>
+      </ul>
+      <section class="skills noprint">
+        <h3>Skills</h3>
+        <ul>
+          <li>Python</li>
+          <li>Go</li>
+        </ul>
+      </section>
+    </article>
     <article style="page-break-inside: auto">
       <a name="two-bulls"></a>
       <h1>
-        Principal Software Developer</h1>
+        Principal Software Engineer</h1>
       <h2 id="two-bulls" class="hide-title">
         <a href="https://www.twobulls.com/" target="_blank" rel="noreferrer">Two Bulls</a>
       </h2>
-      <p class="term"><time datetime="2013-08">August 2013</time> &ndash; <time datetime="2021-04">April 2021</time> | Melbourne</p>
+      <p class="term"><time datetime="2013-08">August 2013</time> &ndash; <time datetime="2021-04">April 2021</time> |
+        Melbourne</p>
       <ul>
         <li>Leads the backend chapter with a responsibility for the mentoring and guiding of its members.</li>
         <li>Technical Lead on numerous projects delivering mobile and web applications.</li>
-        <li>Individually contributed to many innovative products from Augmented Reality, IoT, mobile Bluetooth peripherals, and
-        video distribution.</li>
-        <li>Championed the practices of Infrastructure as Code, Continuous Delivery, and Observability, in order to get changes from
-        development to production as quickly as possible.</li>
+        <li>Individually contributed to many innovative products from Augmented Reality, IoT, mobile Bluetooth
+          peripherals, and video distribution.</li>
+        <li>Championed the practices of Infrastructure as Code, Continuous Delivery, and Observability, in order to get
+          changes from development to production as quickly as possible.</li>
         <li>Management of software engineers to help them meet the businesses needs while pursuing their goals.</li>
       </ul>
-      <section class="skills">
+      <section class="skills noprint">
         <h3>Skills</h3>
         <ul>
           <li>CloudFormation</li>
@@ -398,14 +420,14 @@
       <h2 id="dius" class="hide-title">
         <a href="https://dius.com.au/" target="_blank" rel="noreferrer">DiUS Computing</a>
       </h2>
-      <p class="term"><time datetime="2012-08">August 2012</time> &ndash; <time datetime="2013-08">August 2013</time> | Melbourne</p>
+      <p class="term"><time datetime="2012-08">August 2012</time> &ndash; <time datetime="2013-08">August 2013</time> |
+        Melbourne</p>
       <ul>
-        <!-- <li>Designed and developed a service that acts as a facade to a third party proprietary platform, in order to enhance and extend its capabilities.</li> -->
-        <li>Was part of the development team producing an iOS app for one of Australia's most recognised brands. Focused on
-        development of security features including 2FA.</li>
-        <li>Developed an interactive web application for the <strong>PowerVu</strong> embedded device, with limited storage constraints of under 200&nbsp;KB.</li>
+        <li>Was part of the development team producing an iOS app for one of Australia's most recognised brands. Focused
+          on development of security features including 2FA.</li>
+        <li>Developed an interactive web application for the <strong>PowerVu</strong> embedded device.</li>
       </ul>
-      <section class="skills">
+      <section class="skills noprint">
         <h3>Skills</h3>
         <ul>
           <li>Groovy</li>
@@ -423,13 +445,9 @@
       <h2 id="amazon" class="hide-title">
         <a href="https://www.amazon.com/" target="_blank" rel="noreferrer">Amazon</a>
       </h2>
-      <p class="term"><time datetime="2012-02">February 2012</time> &ndash; <time datetime="2012-07">July 2012</time> | Seattle</p>
-      <ul>
-        <li>Prototyped developer tools to measure the frontend performance impact of changes to the retail website.</li>
-        <!-- <li>Prototyped a frontend verification tool to ensure conformity to a sites style guide.</li> -->
-        <li>Back-ported WebKit's implementation of the <em>Navigation Timing API</em> for use in <strong>QtWebKit/PhantomJS.</strong></li>
-      </ul>
-      <section class="skills">
+      <p class="term"><time datetime="2012-02">February 2012</time> &ndash; <time datetime="2012-07">July 2012</time> |
+        Seattle</p>
+      <section class="skills noprint">
         <h3>Skills</h3>
         <ul>
           <li>C++</li>
@@ -444,14 +462,21 @@
       <h2 id="quest" class="hide-title">
         <a href="https://www.quest.com/" target="_blank" rel="noreferrer">Quest Software</a>
       </h2>
-      <p><time datetime="2010-08">August 2010</time> &ndash; <time datetime="2012-02">February 2012</time> | Melbourne</p>
-      <p>Was part of the <strong>Toad for Cloud Databases</strong> team, providing a data hub solution to allow people with SQL knowledge to query NoSQL databases in an easy and familiar way.</p>
+      <p><time datetime="2010-08">August 2010</time> &ndash; <time datetime="2012-02">February 2012</time> | Melbourne
+      </p>
+      <p>Was part of the <strong>Toad for Cloud Databases</strong> team, providing a data hub solution to allow people
+        with SQL knowledge to query NoSQL databases in an easy and familiar way.</p>
       <ul>
-        <li>Primarily responsible for the development of a <strong>MySQL</strong> database proxy for Linux and Windows, used to perform optimizations of heterogeneous queries. The data hub proxy was a core component in <strong>Toad for Data Analysts 3.0</strong>, Toad for Cloud Databases, and <strong>Quest Business Intelligence Studio</strong>.</li>
-        <li>Developed a MySQL storage engine, to provide a method for querying NoSQL and Cloud database services with SQL.</li>
+        <li>Primarily responsible for the development of a <strong>MySQL</strong> database proxy for Linux and Windows,
+          used to perform optimizations of heterogeneous queries. The data hub proxy was a core component in
+          <strong>Toad for Data Analysts 3.0</strong>, Toad for Cloud Databases, and <strong>Quest Business Intelligence
+            Studio</strong>.
+        </li>
+        <li>Developed a MySQL storage engine, to provide a method for querying NoSQL and Cloud database services with
+          SQL.</li>
         <li>Contributed bug fixes to the MySQL and Drizzle open source projects.</li>
       </ul>
-      <section class="skills">
+      <section class="skills noprint">
         <h3>Skills</h3>
         <ul>
           <li>C++</li>
@@ -472,14 +497,16 @@
       <h2>
         Infinite Interactive
       </h2>
-      <p class="term"><time datetime="2007-10">October 2007</time> &ndash; <time datetime="2010-08">August 2010</time> | Melbourne</p>
-      <p>As a member of the Game Engine team, my role included adding new features to the engine and exposing them to Lua for the game play programmers, as well as maintenance and performance improvements.</p>
+      <p class="term"><time datetime="2007-10">October 2007</time> &ndash; <time datetime="2010-08">August 2010</time> |
+        Melbourne</p>
+      <p>As a member of the Game Engine team, my role included adding new features to the engine and exposing them to
+        Lua for the game play programmers, as well as maintenance and performance improvements.</p>
       <ul>
         <li>Developed the multiplayer networking system for PSP, Xbox 360 and PC.</li>
-        <li>Designed and implemented our engines game object serialization system, which included bit packing of annotated attributes for more efficient memory usage on hand-held devices.</li>
-        <!-- <li>Implemented a save game system for PSP, Xbox 360, PC, and Wii that complied with each platforms certification requirements.</li> -->
-        <li>Primary developer responsible for development and project troubleshooting on the Xbox 360. Played a secondary role in porting our engine to the Nintendo Wii and Sony PlayStation Portable platforms.</li>
-        <!-- <li>Performed last minute optimizations of game specific code on numerous occasions. Including a rewrite of the gem matching algorithm in Lua for Puzzle Quest 2; Improving its performance on the PSP from 6 seconds down to 150ms.</li> -->
+        <li>Designed and implemented our engines game object serialization system, which included bit packing of
+          annotated attributes for more efficient memory usage on hand-held devices.</li>
+        <li>Primary developer responsible for development and project troubleshooting on the Xbox 360. Played a
+          secondary role in porting our engine to the Nintendo Wii and Sony PlayStation Portable platforms.</li>
       </ul>
       <p>Contributed to 6 shipped titles</p>
       <ul>
@@ -487,21 +514,18 @@
         <li>Neopets Puzzle Adventure <span style="font-weight: 300;">(Nintendo Wii/PC)</span></li>
         <li>Puzzle Kingdoms <span style="font-weight: 300;">(Nintendo Wii/Nintendo DS/PC)</span></li>
         <li>Puzzle Quest: Galactrix <span style="font-weight: 300;">(Xbox 360/Nintendo DS/PC)</span></li>
-        <li>Puzzle Chronicles <span style="font-weight: 300;">(Xbox 360/Nintendo DS/Sony PlayStation Portable/PC)</span></li>
-        <li>Puzzle Quest 2 <span style="font-weight: 300;">(Xbox 360/Nintendo DS/Sony PlayStation Portable/PC)</span></li>
+        <li>Puzzle Chronicles <span style="font-weight: 300;">(Xbox 360/Nintendo DS/Sony PlayStation Portable/PC)</span>
+        </li>
+        <li>Puzzle Quest 2 <span style="font-weight: 300;">(Xbox 360/Nintendo DS/Sony PlayStation Portable/PC)</span>
+        </li>
       </ul>
-      <section class="skills">
+      <section class="skills noprint">
         <h3>Skills</h3>
         <ul>
           <li>C</li>
           <li>C++</li>
           <li>Lua</li>
           <li>Python</li>
-          <li>Xbox 360</li>
-          <li>Nintendo DS</li>
-          <li>Nintendo Wii</li>
-          <li>Sony PSP</li>
-          <li>Steam</li>
           <li>Windows</li>
         </ul>
       </section>
@@ -515,7 +539,6 @@
       </h2>
       <p class="term"><time datetime="2006-08">August 2006</time> &ndash; <time datetime="2007-10">October 2007</time>
         | Melbourne</p>
-      <!-- <p>I was asked to join August as a contractor shortly after their founding, and became a full time staff member after completing my degree at <strong>RMIT University.</strong></p> -->
       <section class="skills noprint">
         <h3>Skills</h3>
         <ul>
@@ -536,7 +559,6 @@
       </h2>
       <p class="term"><time datetime="2003-06">June 2003</time> &ndash; <time datetime="2005-08">August 2005</time> |
         Melbourne</p>
-      <!-- <p>I began working as a junior developer at Alkemi after being recommended by my lecturer at <strong>Monash University.</strong> I maintained a relationship with the company for many years and over time became lead developer.</p> -->
       <section class="skills noprint">
         <h3>Skills</h3>
         <ul>
@@ -556,15 +578,15 @@
     <article>
       <h4>Vividas - Video Player SDK</h4>
       <p><time datetime="2017">2017</time> &ndash; <time datetime="2018">2018</time></p>
-      <p>Cross platform video distribution and playback service for mobile and desktop. Strongly focused on performance and
-        power efficiency for mobile devices.</p>
+      <p>Cross platform video distribution and playback service for mobile and desktop. Strongly focused on performance
+        and power efficiency for mobile devices.</p>
       <ul>
-        <li>Core developer of cross platform video playback SDK <span style="font-weight: 300;">(Windows, iOS, tvOS, macOS,
-            and Android)</span></li>
-        <li>Responsible for platform specific hardware accelerated h.264 decoder and asynchronous networking implementations
-        </li>
-        <li>Achieved goals of smooth, uninterrupted playback using low cpu and low power on phones including older budget
-          models</li>
+        <li>Core developer of cross platform video playback SDK <span style="font-weight: 300;">(Windows, iOS, tvOS,
+            macOS, and Android)</span></li>
+        <li>Responsible for platform specific hardware accelerated h.264 decoder and asynchronous networking
+          implementations </li>
+        <li>Achieved goals of smooth, uninterrupted playback using low cpu and low power on phones including older
+          budget models</li>
       </ul>
     </article>
     <article>
@@ -580,9 +602,9 @@
     <article>
       <h4>ATF Vision - Security Monitoring Service</h4>
       <p><time datetime="2015">2015</time> &ndash; <time datetime="2020">2020</time></p>
-      <p>The service provides intelligent video surveillance camera solutions for temporary security camera and construction
-        site monitoring. The app gives customers instant access to their surveillance camera and allows them to view and
-        control their site security.</p>
+      <p>The service provides intelligent video surveillance camera solutions for temporary security camera and
+        construction site monitoring. The app gives customers instant access to their surveillance camera and allows
+        them to view and control their site security.</p>
       <ul>
         <li>Solution Architect for backend service of mobile and web applications</li>
         <li>Long term service maintenance and ongoing improvements including replatforming using serverless technologies
@@ -594,7 +616,8 @@
       <p><time datetime="2015">2015</time> &ndash; <time datetime="2016">2016</time></p>
       <p>A distributed IoT rules engine for controlling your homes various devices with triggers and schedules.</p>
       <ul>
-        <li>Core developer of embedded SDK <span style="font-weight: 300;">(OpenWRT, iOS, macOS, and Android)</span></li>
+        <li>Core developer of embedded SDK <span style="font-weight: 300;">(OpenWRT, iOS, macOS, and Android)</span>
+        </li>
         <li>Responsible for the data access layer</li>
         <li>Integrated a preview version of the <strong>AllJoyn Security 2.0</strong> protocol</li>
         <li>Presented to the <strong>AllSeen Alliance</strong> on using Security 2.0 from a developers perspective</li>
@@ -603,8 +626,8 @@
     <article class="noprint">
       <h4>Grovers Block Party</h4>
       <p><time datetime="2013">2013</time></p>
-      <p>An educational play experience using <strong>Augmented Reality</strong> built for Sesame Workshop in collaboration
-        with Qualcomm.</p>
+      <p>An educational play experience using <strong>Augmented Reality</strong> built for Sesame Workshop in
+        collaboration with Qualcomm.</p>
       <ul>
         <li>Responsible for detection of block arrangements and event triggers.</li>
       </ul>
@@ -618,7 +641,8 @@
     </h2>
     <article>
       <h4>System for providing structured query language access to non-relational data stores</h4>
-      <p><a href="https://patents.justia.com/patent/9886483" target="_blank" rel="noreferrer">Patent number 9886483</a></p>
+      <p><a href="https://patents.justia.com/patent/9886483" target="_blank" rel="noreferrer">Patent number 9886483</a>
+      </p>
       <p>Filed <time datetime="2011">April 2011</time>. Issued <time datetime="2018">February 2018</time></p>
     </article>
   </section>
@@ -652,14 +676,18 @@
   </section>
   <section id="education">
     <h2>
-      <a name="education"></a>Education</h2>
+      <a name="education"></a>Education
+    </h2>
     <article>
       <a name="rmit"></a>
       <h1>Bachelor of Applied Science, Computer Science</h1>
       <h2 id="rmit" class="hide-title">
-        <a href="https://www.rmit.edu.au/" target="_blank" rel="noreferrer">RMIT University</a></h2>
+        <a href="https://www.rmit.edu.au/" target="_blank" rel="noreferrer">RMIT University</a>
+      </h2>
       <p class="term"><time datetime="2004">2004</time> &ndash; <time datetime="2006">2006</time> | Melbourne</p>
-      <p>The majority of software development subjects at RMIT were completed using C and Java and were targeted at the Solaris operating system. I focused my studies on game development, databases, software development practices and methodologies, and programming languages.</p>
+      <p>The majority of software development subjects at RMIT were completed using C and Java and were targeted at the
+        Solaris operating system. I focused my studies on game development, databases, software development practices
+        and methodologies, and programming languages.</p>
       <section class="skills noprint">
         <h3>Skills</h3>
         <ul>
